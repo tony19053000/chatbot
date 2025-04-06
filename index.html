@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLUTUS.Ai</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="left_nav">
+        <ul>
+          <li><img class="imgg" src="logoo.jpg" /></li>
+          <li>PLUTUS <i class="fa-solid fa-caret-down"></i></li>
+        </ul>
+      </div>
+      <div class="right_nav">
+        <ul>
+          <li class="list1"><a href="Login.html">Log in</a></li>
+          <li class="list2"><a href="Signup.html">Sign up</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="text_div">
+        <h1>Let's talk finances - how can I help?</h1>
+      </div>
+
+      <div class="input_div">
+        <input id="queryInput" type="text" placeholder="Ask anything..." />
+        <div class="bottom_input_div">
+          <div class="bottom_left">
+            <div class="text_icon">
+              <i class="fa-solid fa-plus"></i>
+              <span>Attach</span>
+            </div>
+            <div class="text_icon">
+              <i class="fa-solid fa-globe"></i>
+              <span>Search</span>
+            </div>
+            <div class="text_icon">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span>Reason</span>
+            </div>
+          </div>
+          <div class="bottom_right">
+            <img height="25px" src="wave-sound.png" alt="Voice Icon" />
+            <span>Enter</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="icon_div">
+        <div class="text_icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>Get advice</span>
+        </div>
+        <div class="text_icon">
+          <i class="fa-solid fa-lightbulb"></i>
+          <span>Brainstorm</span>
+        </div>
+        <div class="text_icon">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>Summarize text</span>
+        </div>
+        <div class="text_icon">
+          <i class="fa-solid fa-eye"></i>
+          <span>Analyze Images</span>
+        </div>
+        <div class="text_icon">
+          <span>more</span>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- ✅ Script to call chatbot_api.py -->
+    <script>
+      const input = document.getElementById("queryInput");
+
+      input.addEventListener("keypress", async (e) => {
+        if (e.key === "Enter") {
+          const query = input.value;
+          const response = await fetch("http://localhost:8000/ask", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ query }),
+          });
+
+          const data = await response.json();
+          console.log("API Response:", data);
+          alert("Response: " + JSON.stringify(data)); // Replace with display logic later
+          input.value = ""; // Clear input
+        }
+      });
+    </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,308 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #212121;
+    font-family: "Roboto Slab", serif;
+    color: #fff;
+}
+nav{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+li{
+    list-style: none;
+    margin: 10px 5px;
+    font-size: 17px;
+    font-family: "Roboto Slab", serif;
+}
+nav ul li a{
+    text-decoration: none;
+    background: none;
+    ;
+}
+.left_nav ul li{
+    color: #cbc7c7;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.right_nav ul li{
+    margin: 5px 10px;
+}
+.list1{
+    background-color: white;
+    color: #212121;
+    font-size: 15px;
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+.list1 a{
+    color: #212121;
+}
+.list2{
+    /* background-color: white; */
+    /* color: #212121; */
+    border: 1px solid white;
+    font-size: 15px;
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+
+.container{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.input_div{
+  background-color: #303030;
+  border-radius: 20px;
+    width: 60%;
+    /* border: 2px solid white; */
+}
+
+.text_div h1{
+    color: #fff;
+    font-weight: bold;
+    font-family: "Roboto Slab", serif;
+}
+.input_div{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    padding: 20px 30px;
+}
+.input_div input{
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 20px;
+    margin-left: 13px;
+    margin-bottom: 20px;
+
+}
+.input_div input::placeholder{
+    color: rgb(147, 146, 146);
+    font-size: 20px;
+}
+.bottom_input_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #303030;
+}
+
+.bottom_left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #303030;
+}
+.text_icon{
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 90px;
+    margin: 10px 10px;
+    background: none;
+    cursor: pointer;
+}
+.text_icon span{
+    background: none;
+}
+.text_icon i{
+    background: none;
+}
+.bottom_right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    background-color: white;
+    padding: 5px;
+    border-radius: 90px;
+    column-gap: 10px;*{
+        margin: 0px;
+        padding: 0px;
+        background-color: #212121;
+        font-family: "Roboto Slab", serif;
+        color: #fff;
+    }
+    nav{
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    li{
+        list-style: none;
+        margin: 10px 5px;
+        font-size: 17px;
+        font-family: "Roboto Slab", serif;
+    }
+    nav ul li a{
+        text-decoration: none;
+        background: none;
+        ;
+    }
+    .left_nav ul li{
+        color: #cbc7c7;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+    
+    .right_nav ul li{
+        margin: 5px 10px;
+    }
+    .list1{
+        background-color: white;
+        color: #212121;
+        font-size: 15px;
+        padding: 7px 10px;
+        border-radius: 20px;
+    }
+    .list1 a{
+        color: #212121;
+    }
+    .list2{
+        /* background-color: white; */
+        /* color: #212121; */
+        border: 1px solid white;
+        font-size: 15px;
+        padding: 7px 10px;
+        border-radius: 20px;
+    }
+    
+    .container{
+        height: 90vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .input_div{
+      background-color: #303030;
+      border-radius: 20px;
+        width: 60%;
+        /* border: 2px solid white; */
+    }
+    
+    .text_div h1{
+        color: #fff;
+        font-weight: bold;
+        font-family: "Roboto Slab", serif;
+    }
+    .input_div{
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        flex-direction: column;
+        padding: 20px 30px;
+    }
+    .input_div input{
+        background: none;
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 20px;
+        margin-left: 13px;
+        margin-bottom: 20px;
+    
+    }
+    .input_div input::placeholder{
+        color: rgb(147, 146, 146);
+        font-size: 20px;
+    }
+    .bottom_input_div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background-color: #303030;
+    }
+    
+    .bottom_left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #303030;
+    }
+    .text_icon{
+        border: 1px solid white;
+        padding: 5px 10px;
+        border-radius: 90px;
+        margin: 10px 10px;
+        background: none;
+        cursor: pointer;
+    }
+    .text_icon span{
+        background: none;
+    }
+    .text_icon i{
+        background: none;
+    }
+    .bottom_right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white;
+        background-color: white;
+        padding: 5px;
+        border-radius: 90px;
+        column-gap: 10px;
+        cursor: pointer;
+    }
+    .bottom_right img{
+        background: none;
+    }
+    .bottom_right span{
+        background: none;
+        color: #000;
+    }
+    .icon_div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        font-size: 17px;
+    }
+    cursor: pointer;
+}
+.bottom_right img{
+    background: none;
+}
+.bottom_right span{
+    background: none;
+    color: #000;
+}
+.icon_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    font-size: 17px;
+}.imgg{
+    height: 40px;
+    width: 40px;
+}

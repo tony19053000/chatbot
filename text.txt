@@ -1,0 +1,2 @@
+background-color = #212121
+input-color = #303030

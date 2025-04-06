@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | PLUTUS.Ai</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="left_nav">
+        <ul>
+          <li><img class="imgg" src="logoo.jpg" /></li>
+          <li><a href="index.html">PLUTUS <i class="fa-solid fa-caret-down"></i></a></li>
+        </ul>
+      </div>
+      <div class="right_nav">
+        <ul>
+          <li class="list1"><a href="login.html">Log in</a></li>
+          <li class="list2"><a href="Signup.html">Sign up</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Create an account</h1>
+      <form id="signupForm">
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+        <button type="submit">Continue</button>
+      </form>
+
+      <p class="Account_text">
+        Already have an account? <a href="login.html">Log In</a>
+      </p>
+
+      <div class="or_line">
+        <div class="line"></div>
+        <span>OR</span>
+        <div class="line"></div>
+      </div>
+
+      <div class="btns">
+        <div class="btn">
+          <img src="search.png" alt="Google" />
+          <span>Continue with Google</span>
+        </div>
+        <div class="btn">
+          <img src="microsoft.png" alt="Microsoft" />
+          <span>Continue with Microsoft Account</span>
+        </div>
+        <div class="btn">
+          <img src="apple.png" alt="Apple" />
+          <span>Continue with Apple</span>
+        </div>
+        <div class="btn">
+          <img src="telephone.png" alt="Phone" />
+          <span>Continue with phone</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('signupForm').addEventListener('submit', async function (e) {
+        e.preventDefault(); // Stop form from submitting normally
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        try {
+          const response = await fetch('http://localhost:8000/register', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, password }),
+          });
+
+          const data = await response.json();
+
+          if (response.ok) {
+            alert('Registration successful!');
+            // Optional: redirect or save token
+            // window.location.href = 'login.html';
+          } else {
+            alert(data.detail || 'Registration failed!');
+          }
+        } catch (err) {
+          alert('An error occurred during sign up. Please try again.');
+          console.error(err);
+        }
+      });
+    </script>
+  </body>
+</html>

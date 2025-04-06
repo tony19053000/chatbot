@@ -1,0 +1,76 @@
+.btn img{
+    height: 30px;
+    margin-left: 10px;
+}
+
+nav h1 a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    flex-direction: column;
+}
+*{
+    font-family: "Roboto Slab", serif;
+}
+input{
+    font-size: 20px;
+    padding: 10px;
+    outline: none;
+    /* border-color: gray; */
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 400px;
+    margin: 5px 0;
+}
+button{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #10a37f;
+    border: none;
+    color: #fff;
+    width: 420px;
+}
+.Account_text{
+    font-size: 20px;
+}
+.Account_text a{
+    color: #10a37f;
+    font-size: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.or_line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.or_line span{
+    margin: 0 10px;
+    font-size: 20px;
+}
+.line{
+    height: 1px;
+    background-color: gray;
+    width: 180px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 400px;
+    border: 1px solid gray;
+    font-size: 20px;
+    margin: 5px;
+    color: rgb(65, 64, 64);
+    column-gap: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
